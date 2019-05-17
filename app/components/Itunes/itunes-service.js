@@ -11,7 +11,7 @@ let _subscribers = {
 
 function setState(prop, data) {
   _state[prop] = data
-  _subscribers[prop].forEach(fn => fn())
+  _subscribers[prop].forEach(fn => fn(data))
 }
 
 //DO NOT MODIFY

@@ -8,4 +8,12 @@ export default class Song {
         this.price = song.collectionPrice
         this.preview = song.previewUrl
     }
+
+    get Template() {
+        return `<li> ${this.title} --- ${this.preview}</li>
+                 <audio onplay="app.controllers.itunesCtrl.autoPause(${this.title})" controls>
+  <source src="${this.preview}" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio> `
+    }
 }
