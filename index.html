@@ -11,21 +11,25 @@
 
 </head>
 
-<body>
-    <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
-        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-        <div class="form-group">
-            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-            <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
-        </div>
-    </form>
-    <div>
-        <ul id="songs">
+<body style="background-color:#adb5bd">
+    <header class="container-fluid">
+        <nav class="navbar fixed-top navbar-dark bg-dark">
+            <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+                <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                <div class="form-group">
+                    <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                    <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+                </div>
+            </form>
+        </nav>
+    </header>
 
-        </ul>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="module" src="app/main.js"></script>
+    <main class="container-fluid">
+        <div class='row justify-content-around' id="songs">
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="module" src="app/main.js"></script>
+    </main>
 </body>
 
 </html>
