@@ -24,10 +24,13 @@ class ItunesController {
   }
 
   autoPause(currentSong) {
+    //debugger
     let songs = document.querySelectorAll('audio');
-    songs
+    songs.forEach(song => {
+      if (song.currentSrc !== currentSong) { song.pause() }
+    })
   }
-
+  //if(song.getAttribute('src') !== currentSong)
 
   //DO NOT MODIFY THIS METHOD
   getMusic(e) {
